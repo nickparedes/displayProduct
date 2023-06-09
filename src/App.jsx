@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import Card from './utils/Card'
+import CardGrid from './components/CardGrid'
+
 
 
 
@@ -9,12 +12,9 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <div style={{background : "#7D9153",  height: "400px"}}></div>
-      <div style={{background : "#8B8FC5",  height: "400px"}}></div>
-      <div style={{background : "#7D9153",  height: "400px"}}></div>
-      <div style={{background : "#8B8FC5",  height: "400px"}}></div>
-      <div style={{background : "#7D9153",  height: "400px"}}></div>
-      <div style={{background : "#8B8FC5",  height: "400px"}}></div>
+      <div style={{background : "transparent",  height: "74px"}}></div>
+      <CardGrid/>
+      
     </div>
     
   )
