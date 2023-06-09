@@ -2,12 +2,16 @@ import Autosuggest from "react-autosuggest";
 import { useState } from "react";
 import { db } from "../db";
 import styled from "styled-components";
-
+import { useModal } from "../hooks/useModal";
+import Modal from "./Modal.jsx"
+import ModalCard from "../components/ModalCard";
 
 function Autocompletado() {
   const [productos, setProductos] = useState(db);
   const [value, setValue] = useState("");
   const [productoSeleccionado, setProductoSeleccionado] = useState({});
+  const [isOpenModal1, openModal1, closeModal1] = useModal(false)
+
 
   const onSuggestionsFetchRequested = ({ value }) => {
     setProductos(filtrarProductos(value));
@@ -89,7 +93,12 @@ function Autocompletado() {
       />
       <br />
     
-      <button className="material-symbols-outlined" onClick={() => console.log(productoSeleccionado)} >search</button>
+      
+
+      <button className="material-symbols-outlined" onClick={openModal1} >search</button>
+      <Modal isOpen= {isOpenModal1} closeModal={closeModal1}>
+            <ModalCard producto = {productoSeleccionado}/>
+      </Modal> 
     </Container>
   );
 }

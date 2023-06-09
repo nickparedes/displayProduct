@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/react.svg";
+import logo from "../assets/logo.png";
 import styled from "styled-components";
 
 import Autocompletado from "../utils/Autocompletado";

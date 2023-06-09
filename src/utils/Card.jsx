@@ -83,7 +83,7 @@ padding: 1rem 0px;
 }
 
 .clash-card__level--barbarian {
-  color: #EC9B3B;
+  color: rgb(107, 99, 255);;
 }
 
 
@@ -102,10 +102,10 @@ padding: 1rem 0px;
 }
 
 .clash-card__unit-stats--barbarian {
-  background: #EC9B3B;
+  background: rgb(107, 99, 255);
 }
 .clash-card__unit-stats--barbarian .one-third {
-  border-right: 1px solid #BD7C2F;
+  border-right: 1px solid black;
   
 }
 
